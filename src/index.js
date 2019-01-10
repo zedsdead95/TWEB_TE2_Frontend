@@ -1,12 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Movie from './Movie';
+import { Switch, Route } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const Routes = () => (
+  <Switch>
+    <Route exact path="/" component={App} />
+    <Route exact path="/movies" component={Movie} />
+    <Route exact path="/newmovies" component={Movie} />
+  </Switch>
+)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+export default Routes

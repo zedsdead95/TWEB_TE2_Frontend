@@ -1,0 +1,23 @@
+module.exports = {
+  "env": {
+      "browser": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+      "ecmaVersion": 5
+  },
+  "rules": {
+      "linebreak-style": [
+          "error",
+          "unix"
+      ],
+      "quotes": [
+          "error",
+          "double"
+      ],
+      "semi": [
+          "error",
+          "never"
+      ]
+  }
+};
